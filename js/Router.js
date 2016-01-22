@@ -25,7 +25,7 @@ define([
     AppRouter.on('route:home', function() {
       var menuView = new MenuView({
         collection: new MenuListCollection()
-      })
+      }).render();
     });
 
     AppRouter.on('route:categoryPage', function(category){
