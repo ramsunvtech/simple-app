@@ -2,12 +2,11 @@
 define([
   'backbone',
   'marionette',
-  'view/CommonLayout',
   'view/MenuItem',
   'view/Content',
   'model/Content',
   'collection/MenuList',
-], function(Backbone, Marionette, CommonLayout, MenuView, ContentView, ContentModel, MenuListCollection) {
+], function(Backbone, Marionette, MenuView, ContentView, ContentModel, MenuListCollection) {
 
    var appRouter = Backbone.Router.extend({
       routes: {
@@ -19,8 +18,7 @@ define([
 
   var initialize = function (app) {
   
-    var layout = new CommonLayout(),
-        AppRouter = new appRouter;
+    var AppRouter = new appRouter;
 
     AppRouter.on('route:home', function() {
       console.log('default page');
