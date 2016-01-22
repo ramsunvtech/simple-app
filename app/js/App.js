@@ -1,11 +1,19 @@
 // Filename: app.js
 define([
+  'backbone',
+  'marionette',
   'Router'
-], function(Router) {
+], function(Backbone, Marionette, Router) {
 
-  var initialize = function(){
+  var MyApp = new Marionette.Application();
+  
+  MyApp.addRegions({
+    container: 'body'
+  });
+
+  var initialize = function() {
     // Pass in our Router module and call it's initialize function
-    Router.initialize();
+    Router.initialize(MyApp);
   };
 
   return { 
