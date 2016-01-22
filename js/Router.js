@@ -8,6 +8,8 @@ define([
   'collection/MenuList',
 ], function(Backbone, Marionette, MenuView, ContentView, ContentModel, MenuListCollection) {
 
+console.log('loading Router !');
+
    var appRouter = Backbone.Router.extend({
       routes: {
         // Define some URL routes
