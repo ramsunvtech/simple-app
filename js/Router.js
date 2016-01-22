@@ -23,9 +23,12 @@ define([
         AppRouter = new appRouter;
 
     AppRouter.on('route:home', function() {
+      console.log('default page');
       var menuView = new MenuView({
         collection: new MenuListCollection()
       }).render();
+
+      console.log(menuView)
     });
 
     AppRouter.on('route:categoryPage', function(category){
