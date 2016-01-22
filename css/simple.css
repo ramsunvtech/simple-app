@@ -1,0 +1,67 @@
+body {
+  font-family: trebuchet ms;
+  margin: auto;
+  background-color: #C5B9B9;
+}
+
+main {
+  margin: 0 auto;
+  width: 450px;
+}
+
+nav {
+  position: fixed;
+  height: 100%;
+  background-color: #055;
+}
+
+ul.menu {
+    margin: 0; 
+    padding: 0;
+    width:210px;
+    list-style-type: none;
+}
+
+ul.menu li.first a, ul.menu li.back a {
+  background-color: #666;
+}
+
+ul.menu li.first,
+ul.menu li.back,
+ul.menu li.submenu,
+ul.submenu li.root {
+  display: none;
+}
+
+ul.submenu li.first,
+ul.submenu li.back {
+  display: block;
+}
+
+ul.menu li a {
+    text-decoration: none;
+    color: white; 
+    padding: 10.5px 18px;
+    background-color: #005555;
+    display:block;
+}
+ 
+ul.menu li a:hover, ul.menu li .current {
+    color: white;
+    background-color: #5FD367;
+}
+
+ul.menu li .selected {
+  background-color: #C5B9B9;
+  color: #000;
+}
+
+article {
+  float: left;
+  padding-left: 250px;
+  width: 100%;
+}
+
+article p {
+  line-height: 25px;
+}

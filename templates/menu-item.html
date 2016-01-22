@@ -1,0 +1,16 @@
+<ul class="menu">
+	<li class="first"><a href="#">Go to Main</a></li>
+
+  <% 
+  	_.each(menuList, function(menu) {
+  		parentClass = (!menu.parentId) ? 'root' : 'menu-' + menu.parentId;
+  		itemClass = (parentClass != 'root') ? parentClass + ' submenu' : 'root';
+  		itemLink = (menu.link) ? 'details/' + menu.link : '#';
+  %>
+		<li class="<%=itemClass%>">
+	    	<a data-id="<%=menu.id %>" data-parent="<%=parentClass%>" href="<%=itemLink%>">
+	    		<%= menu.title %>
+	    	</a>
+	    </li>
+  <% }); %>
+</ul>
