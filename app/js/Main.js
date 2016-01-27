@@ -7,7 +7,6 @@ require.config({
     jquery: "libs/jquery-min",
     underscore: "libs/underscore-min",
     backbone: "libs/backbone-min",
-    marionette: "libs/backbone.marionette",
     text: "libs/requirejs/text",
     templates: "../templates"
   },
@@ -23,14 +22,6 @@ require.config({
       deps: [
         "jquery",
         "underscore"
-      ]
-    },
-
-    marionette: {
-      exports: "marionette",
-      deps: [
-        "jquery",
-        "Backbone"
       ]
     }
 
